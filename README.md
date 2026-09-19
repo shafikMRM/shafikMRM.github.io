@@ -4,8 +4,8 @@ Portfolio of **Mohammed Shafeeque M**, full stack developer in Dubai.
 
 Live at **https://shafikmrm.github.io/**
 
-A single static `index.html` with no build step. Light and dark themes follow the system setting, and all animation is turned off for visitors who prefer reduced motion.
+A single static `index.html` with no build step. It includes light and dark themes with a switch, a Motion on/off toggle that respects reduced-motion settings, a project cover flow and grid, and case-study dialogs.
 
-## Adding project screenshots
+## Adding a portrait
 
-Each case study has a placeholder frame. Add images to an `assets/` folder (1600×1000, 16:10) and replace each `<div class="placeholder" ...>` with the `<img>` tag in the `REPLACE` comment just above it.
+Put `photo.jpg` next to `index.html` and uncomment the `<img>` line inside the portrait block.
