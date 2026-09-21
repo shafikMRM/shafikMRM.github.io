@@ -162,7 +162,7 @@ html.lenis,html.lenis body{height:auto}
   radial-gradient(90% 70% at 30% 20%,#2c2a31,#17161A 70%);box-shadow:var(--shadow);border:1px solid var(--edge)}
 .portrait .initials{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:clamp(4rem,9vw,7.5rem);color:rgba(242,206,27,.9);letter-spacing:-.02em}
 .portrait .initials small{position:absolute;bottom:1.4rem;left:1.5rem;font-family:var(--cond);font-size:.75rem;letter-spacing:.2em;color:rgba(255,255,255,.55);font-weight:500;text-transform:uppercase}
-.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(var(--photo))}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:brightness(var(--photo))}
 .portrait::after{content:"";position:absolute;inset:-20%;background:linear-gradient(105deg,transparent 40%,rgba(255,236,150,.55) 50%,transparent 60%);transform:translateX(-120%);pointer-events:none}
 .portrait.shine::after{animation:shine 1100ms var(--glide)}
 @keyframes shine{to{transform:translateX(120%)}}
@@ -502,8 +502,7 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
       <div class="visual rv" aria-label="Portrait and project previews">
         <div class="portrait" id="portrait">
           <div class="initials" aria-hidden="true">MS<small>Dubai, UAE</small></div>
-          <!-- To show your photo: put photo.jpg next to this file and uncomment the line below -->
-          <!-- <img src="photo.jpg" alt="Portrait of Mohammed Shafeeque" width="600" height="700"> -->
+          <img src="photo.jpg" alt="Portrait of Mohammed Shafeeque" width="640" height="640">
         </div>
         <div class="slides" id="slides" aria-hidden="true">
           <div class="slide on"><div class="chrome"><i></i><i></i><i></i><span>mrminvestment.ae</span></div>
