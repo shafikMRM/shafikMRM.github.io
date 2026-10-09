@@ -3,30 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mohammed Shafeeque M | Full Stack Developer in Dubai</title>
-<meta name="description" content="Full stack developer in Dubai building corporate websites, universal apps and fast, reliable backends with PHP, Laravel, Next.js and Node.js.">
+<title>Mohammed Shafeeque M | Full Stack Developer | Node.js, React, Next.js, Expo, PHP/Laravel</title>
+<meta name="description" content="Full Stack Developer in Dubai with 4+ years building websites, ERP modules, CMS platforms and REST APIs with Node.js, React, Next.js, Expo and PHP/Laravel.">
 <meta name="author" content="Mohammed Shafeeque M">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Mohammed Shafeeque M | Full Stack Developer">
-<meta property="og:description" content="Websites, universal apps and backends with PHP, Laravel, Next.js and Node.js. Based in Dubai.">
+<meta property="og:title" content="Mohammed Shafeeque M | Full Stack Developer | Node.js, React, Next.js, Expo, PHP/Laravel">
+<meta property="og:description" content="Full Stack Developer in Dubai with 4+ years building websites, ERP modules, CMS platforms and REST APIs with Node.js, React, Next.js, Expo and PHP/Laravel.">
 <meta property="og:url" content="https://shafikmrm.github.io/">
 <meta name="theme-color" content="#17161A">
 <link rel="canonical" href="https://shafikmrm.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2317161A'/><text x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23F2CE1B'>MS</text></svg>">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Mohammed Shafeeque M","jobTitle":"Full Stack Developer","email":"mailto:shafeequeshzdxb@gmail.com","telephone":"+971553683653","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"worksFor":{"@type":"Organization","name":"MRM Investment LLC / Vesla Group"},"url":"https://shafikmrm.github.io/","sameAs":["https://github.com/shafikMRM"],"knowsAbout":["PHP","Laravel","Next.js","React","Node.js","TypeScript","PostgreSQL","MySQL","Python Flask"]}
+{"@context":"https://schema.org","@type":"Person","name":"Mohammed Shafeeque M","jobTitle":"Full Stack Developer","email":"mailto:shafeequeshzdxb@gmail.com","telephone":"+971567840532","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"worksFor":{"@type":"Organization","name":"MRM Investment LLC (Vesla Group)"},"url":"https://shafikmrm.github.io/","sameAs":["https://www.linkedin.com/in/mohammed-shafeeque-046b12135","https://github.com/shafikMRM"],"knowsAbout":["Node.js","Express.js","TypeScript","React","Next.js","Expo","WordPress","PHP","Laravel","PostgreSQL","MySQL","Python Flask","Technical SEO"]}
 </script>
 <script>
 /* Set theme and motion before first paint */
 (function(){
-  var d=document.documentElement,t=null,m=null;
-  try{t=localStorage.getItem('theme');m=localStorage.getItem('motion');}catch(e){}
+  var d=document.documentElement,t=null;
+  try{t=localStorage.getItem('theme');}catch(e){}
   if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
   d.setAttribute('data-theme',t);
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  d.setAttribute('data-motion',m?m:(reduce?'off':'on'));
+  d.setAttribute('data-motion',reduce?'off':'on');
 })();
 </script>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -318,7 +319,7 @@ section{padding:clamp(5rem,10vw,8.5rem) 0}
 .did li{position:relative;padding-left:1.1rem;color:var(--text2);font-size:.96rem;line-height:1.5}
 .did li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .did .tags{padding:0;margin:0}
-.fcap .btn{margin-top:1.5rem}
+.fbtns{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
 @media (max-width:700px){.did{grid-template-columns:1fr}.flow-cap{min-height:0}}
 @media (max-width:600px){.flow{--fw:58vw}.hint{display:none}}
 
@@ -366,6 +367,13 @@ section{padding:clamp(5rem,10vw,8.5rem) 0}
 .ccard .acts{display:flex;gap:1.1rem;margin-top:.7rem;flex-wrap:wrap}
 .ccard .acts a,.ccard .acts button{font-family:var(--cond);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#F2CE1B;text-decoration:none;position:relative;z-index:2}
 .ccard .spot{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 300ms var(--soft);background:radial-gradient(320px circle at var(--mx) var(--my),rgba(242,206,27,.14),transparent 60%)}
+.ccard.wide{grid-column:span 2;flex-direction:row;flex-wrap:wrap;align-items:flex-end;gap:1.5rem}
+.ccard.wide .pc{display:flex;flex-direction:column;gap:.35rem;flex:1 1 260px;align-self:stretch}
+.ccard.wide .pc .btn{margin-top:1rem;align-self:flex-start}
+.li-badge{position:relative;z-index:2;max-width:100%;overflow:hidden}
+.li-badge:empty{display:none}
+@media (max-width:1020px){.ccards{grid-template-columns:repeat(2,1fr)}.ccard.wide{order:1}}
+@media (max-width:600px){.ccards{grid-template-columns:1fr}.ccard.wide{grid-column:auto}}
 @media (hover:hover) and (pointer:fine){
   .ccard:hover{border-color:rgba(242,206,27,.45);background:rgba(255,255,255,.06)}
   .ccard:hover .spot{opacity:1}
@@ -376,11 +384,8 @@ section{padding:clamp(5rem,10vw,8.5rem) 0}
 /* Footer */
 footer{padding:3rem 0 3.5rem}
 footer .wrap{padding-right:calc(52px + clamp(1.5rem,4vw,3rem));display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;color:var(--text2);font-size:.92rem}
-.mt{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--cond);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
-.mt .sw{width:38px;height:22px;border-radius:999px;background:var(--edge);position:relative;transition:background 300ms}
-.mt .sw::after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:var(--surface);transition:transform 360ms var(--glide);box-shadow:0 1px 3px rgba(0,0,0,.3)}
-.mt[aria-checked="true"] .sw{background:var(--gold-deep)}
-.mt[aria-checked="true"] .sw::after{transform:translateX(16px)}
+footer nav{display:flex;gap:1.5rem;font-family:var(--cond);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+footer nav a{text-decoration:none}
 
 /* Back to top */
 .totop{position:fixed;right:clamp(1rem,3vw,2rem);bottom:calc(clamp(1rem,3vw,2rem) + env(safe-area-inset-bottom,0px));width:52px;height:52px;border-radius:50%;background:var(--surface);border:1px solid var(--edge);box-shadow:var(--shadow);display:grid;place-items:center;z-index:90;opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;transition:opacity 400ms var(--soft),transform 500ms var(--pop)}
@@ -489,15 +494,16 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
   <section class="hero" id="top" aria-labelledby="hero-title">
     <div class="wrap grid">
       <div>
-        <p class="eyebrow rv">Full stack developer in Dubai</p>
+        <p class="eyebrow rv">Dubai, United Arab Emirates</p>
         <h1 id="hero-title" class="words">Mohammed Shafeeque&nbsp;M</h1>
-        <p class="role rv"><b>PHP · Laravel</b> on the backend, <b>Next.js · React</b> on the front</p>
+        <p class="role rv"><b>Full Stack Developer</b> | Node.js, React, Next.js, Expo, PHP/Laravel | <b>ERP, CMS &amp; SEO</b></p>
         <p class="lead rv">I build corporate websites, ERP integrations and fast, reliable backends. Four years across travel, banking and e-commerce products for clients in India, Germany and the US, now shipping for a twelve-business group in Dubai.</p>
         <div class="ctas rv">
           <a class="btn primary mag" href="#work">View my work</a>
           <a class="btn ghost mag" href="#contact">Contact me</a>
+          <a class="btn ghost mag" href="/assets/Mohammed_Shafeeque_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
         </div>
-        <p class="avail rv"><i aria-hidden="true"></i>Currently at MRM Investment LLC / Vesla Group</p>
+        <p class="avail rv"><i aria-hidden="true"></i>Currently at MRM Investment LLC (Vesla Group)</p>
       </div>
       <div class="visual rv" aria-label="Portrait and project previews">
         <div class="portrait" id="portrait">
@@ -513,7 +519,7 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
             <div class="mock" style="grid-template-rows:auto 1fr"><div><p class="sub">Travel agency accounting</p><p class="hd">Ledger, invoices, reports.</p></div>
               <div style="display:grid;gap:5px;grid-auto-rows:1fr"><div style="display:grid;grid-template-columns:2fr 1fr;gap:5px"><div class="blk"></div><div class="blk g"></div></div><div style="display:grid;grid-template-columns:2fr 1fr;gap:5px"><div class="blk"></div><div class="blk"></div></div><div style="display:grid;grid-template-columns:2fr 1fr;gap:5px"><div class="blk"></div><div class="blk ink"></div></div></div></div><span class="slabel">TRAACS</span></div>
           <div class="slide"><div class="chrome"><i></i><i></i><i></i><span>erp / cms / pages</span></div>
-            <div class="mock" style="grid-template-columns:.5fr 1.5fr"><div class="blk ink"></div><div style="display:grid;gap:6px;grid-auto-rows:1fr"><div class="blk"></div><div class="blk"></div><div class="blk g"></div><div class="blk"></div></div></div><span class="slabel">MRM ERP</span></div>
+            <div class="mock" style="grid-template-columns:.5fr 1.5fr"><div class="blk ink"></div><div style="display:grid;gap:6px;grid-auto-rows:1fr"><div class="blk"></div><div class="blk"></div><div class="blk g"></div><div class="blk"></div></div></div><span class="slabel">Vesla ERP</span></div>
           <div class="slide"><div class="chrome"><i></i><i></i><i></i><span>mrm core business center</span></div>
             <div class="mock" style="grid-template-rows:1fr auto"><div class="blk g" style="display:grid;place-items:center"><p class="hd" style="color:#17161A">Workspaces that work.</p></div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;height:28px"><div class="blk"></div><div class="blk"></div><div class="blk"></div><div class="blk"></div></div></div><span class="slabel">MRM Core</span></div>
         </div>
@@ -538,15 +544,15 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
           <h2 id="about-title" class="words">Backend depth, with an eye for the finish.</h2>
         </div>
         <div class="story rv">
-          <p class="lead">I started in PHP and Laravel, building banking and e-commerce systems where the data had to be right every time. At Nucore I spent three years on TRAACS, a travel agency accounting product: backend features in PHP and Zend on PostgreSQL, its business intelligence module, and the SQL that keeps reports fast.</p>
-          <p class="muted">Now at MRM Investment LLC / Vesla Group in Dubai, I work across the whole stack. I build corporate websites in Next.js and React, and extend MRM ERP so it feeds them content. I like clean APIs, honest estimates and software that people don't have to think about.</p>
+          <p class="lead">Full Stack Developer with 4+ years of experience building websites, ERP modules, CMS platforms and REST APIs with Node.js, Express.js, TypeScript, React.js, Next.js, Expo, WordPress (headless), PHP (Laravel, Zend Framework, Drupal) and Python Flask on PostgreSQL and MySQL.</p>
+          <p class="muted">At MRM Investment LLC (Vesla Group), a Dubai holding group of twelve businesses, I built the group's corporate website end to end, moved its content management into the in-house ERP, and fix SEO and CMS issues across the Vesla ERP and the Vesla Rent A Car website and apps. I'm strong in technical SEO and careful debugging, and I use the Claude AI coding agent for AI-assisted development.</p>
         </div>
       </div>
       <div class="stats">
-        <div class="stat rv"><p class="n"><span data-count="4">0</span>+</p><p>years building production web applications</p></div>
-        <div class="stat rv"><p class="n"><span data-count="30">0</span>%</p><p>faster system performance after backend optimisation</p></div>
-        <div class="stat rv"><p class="n"><span data-count="100">0</span>%</p><p>data accuracy across large dataset imports</p></div>
-        <div class="stat rv"><p class="n"><span data-count="25">0</span>%</p><p>rise in client satisfaction from UX improvements</p></div>
+        <div class="stat rv"><p class="n"><span data-count="4">4</span>+</p><p>years building production web applications</p></div>
+        <div class="stat rv"><p class="n"><span data-count="30">30</span>%</p><p>faster system performance after backend optimisation</p></div>
+        <div class="stat rv"><p class="n"><span data-count="100">100</span>%</p><p>data accuracy across large dataset imports</p></div>
+        <div class="stat rv"><p class="n"><span data-count="25">25</span>%</p><p>rise in client satisfaction from UX improvements</p></div>
       </div>
     </div>
   </section>
@@ -556,18 +562,25 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
     <div class="wrap">
       <div class="head">
         <div><p class="eyebrow rv">Skills</p><h2 id="skills-title" class="words">One developer, the whole stack.</h2></div>
-        <p class="lead rv">Four areas I work in every week. Hover a group to see where it sits.</p>
+        <p class="lead rv">The areas I work in. Hover a group to see where it sits.</p>
       </div>
       <div class="grid">
         <div class="hub rv" aria-hidden="true">
           <svg viewBox="0 0 600 520" id="hubSvg"></svg>
         </div>
+        <div>
         <ul class="groups" id="groups">
-          <li class="group rv" data-g="0"><h3>Frontend <span>01</span></h3><p>React, Next.js, JavaScript, TypeScript, Backbone.js, jQuery, HTML, CSS, Bootstrap</p></li>
-          <li class="group rv" data-g="1"><h3>Backend <span>02</span></h3><p>PHP, Laravel, Zend Framework, Drupal, Node.js, Express, Python Flask, REST APIs, headless WordPress</p></li>
-          <li class="group rv" data-g="2"><h3>Data &amp; BI <span>03</span></h3><p>MySQL, PostgreSQL, Prisma, PDO, query optimisation, reporting and Excel/PDF/CSV exports</p></li>
-          <li class="group rv" data-g="3"><h3>DevOps &amp; tools <span>04</span></h3><p>AWS, Docker, Jenkins, SonarQube, Git, GitHub, Jira, Agile/Scrum</p></li>
+          <li class="group rv" data-g="0"><h3>Languages <span>01</span></h3><p>JavaScript, TypeScript, PHP, Python, SQL, HTML5, CSS3</p></li>
+          <li class="group rv" data-g="1"><h3>Frontend <span>02</span></h3><p>React.js 19, Next.js 15 (App Router), Expo Router (React Native for Web), Tailwind CSS, Vite, Leaflet, Backbone.js, jQuery, Ajax, Bootstrap</p></li>
+          <li class="group rv" data-g="2"><h3>Backend <span>03</span></h3><p>Node.js, Express.js, Laravel, Zend Framework, Drupal, Core PHP, Python Flask, Django (Basic), REST APIs, cURL</p></li>
+          <li class="group rv" data-g="3"><h3>CMS &amp; SEO <span>04</span></h3><p>Headless WordPress, Custom WordPress Plugins, WordPress REST API, ACF, Custom Post Types, ERP-based CMS, Rich-Text Editors, Role-Based Permissions, Technical SEO (meta tags, canonical URLs, Open Graph, JSON-LD, sitemaps, 301 redirects), On-Demand Revalidation</p></li>
+          <li class="group rv" data-g="4"><h3>Databases <span>05</span></h3><p>PostgreSQL, MySQL, Prisma, Eloquent ORM, PDO, Postgres Queues, SQL Query Optimization</p></li>
+          <li class="group rv" data-g="5"><h3>ERP &amp; Business <span>06</span></h3><p>ERP Development, Car Rental Systems (RTA TARS, Salik, SIRA GPS), API Audits, Third-Party Integrations, BI Reporting (Excel, PDF, CSV), Data Analysis</p></li>
+          <li class="group rv" data-g="6"><h3>DevOps &amp; Tools <span>07</span></h3><p>Render, AWS (S3), Docker, Jenkins, SonarQube, Git, GitHub (branches, pull requests), LocalWP, Jira, Gulp, Agile/Scrum</p></li>
+          <li class="group rv" data-g="7"><h3>AI Tools <span>08</span></h3><p>Claude AI Coding Agent (Claude Code), AI-Assisted Development, Prompt-Driven Code Audits</p></li>
         </ul>
+        <div class="tags rv" style="padding:1rem 1.25rem 0"><span>Currently learning: MongoDB</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -596,7 +609,7 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
         <div class="flow-cap" aria-live="polite">
           <div class="flow-nav">
             <button class="icon-btn" type="button" id="flowPrev" aria-label="Previous project"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
-            <p class="count" id="flowCount">01 / 07</p>
+            <p class="count" id="flowCount"></p>
             <button class="icon-btn" type="button" id="flowNext" aria-label="Next project"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
           </div>
           <div id="flowInfo"></div>
@@ -613,8 +626,8 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
         <div><p class="eyebrow rv">Experience</p><h2 id="exp-title" class="words">Where I've worked.</h2></div>
       </div>
       <ol class="tl">
-        <li class="rv"><p class="when">Current</p><div><h3>Developer</h3><p class="co">MRM Investment LLC / Vesla Group · Dubai</p>
-          <ul><li>Corporate websites for MRM Investment LLC and MRM Core Business Center in Next.js and React.</li><li>Extending MRM ERP (Node.js, TypeScript, PostgreSQL) so its CMS module powers the company websites.</li></ul></div></li>
+        <li class="rv"><p class="when">Aug 2026 – Present</p><div><h3>Full Stack Developer</h3><p class="co">MRM Investment LLC (Vesla Group) · Dubai</p>
+          <ul><li>Built the MRM Investment corporate website (headless WordPress + Next.js 15, later Expo Router for web, iOS and Android) with full technical SEO.</li><li>Moved the website's content management into the Vesla ERP: admin REST APIs and editor screens with role-based permissions.</li><li>Audited the ERP's APIs against Dubai car rental rules (RTA TARS, Salik, SIRA GPS, VAT) into a prioritised backlog.</li><li>Fixed 19 SEO and CMS issues on the Vesla Rent A Car website and apps, upgraded the rich-text editor, and took over the Speed integration.</li><li>AI-assisted development with the Claude AI coding agent.</li></ul></div></li>
         <li class="rv"><p class="when">Sep 2022 – Nov 2025</p><div><h3>Software Engineer, Full Stack</h3><p class="co">Nucore Software Solutions · Kozhikode</p>
           <ul><li>Worked on TRAACS, a travel agency accounting product, and built and maintained its BI module (Python Flask, Backbone.js).</li><li>Customised backend features in PHP, Zend Framework and core PHP; secure PDO queries on MySQL and PostgreSQL.</li><li>Report exports to Excel, PDF and CSV, cURL data dumps, and Postgres queues for background work.</li><li>Worked directly with clients on requirements and with cross-functional teams in Jira.</li></ul></div></li>
         <li class="rv"><p class="when">Apr 2022 – Aug 2022</p><div><h3>Junior Software Engineer</h3><p class="co">Syncrayons Technologies · Trivandrum</p>
@@ -625,11 +638,14 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
       <div class="edu">
         <div class="rv"><p class="eyebrow">Education</p>
           <dl><div><dt><h3>BE, Computer Science and Engineering</h3></dt><dd>Kumaraguru College of Technology, Coimbatore. First Class, CGPA 7.3</dd></div>
-          <div><dt><h3>Diploma, Computer Science and Engineering</h3></dt><dd>Ramakrishna Polytechnic College, Coimbatore. Distinction, CGPA 8.0</dd></div></dl></div>
+          <div><dt><h3>Diploma, Computer Science and Engineering</h3></dt><dd>Ramakrishna Polytechnic College, Coimbatore. Distinction, CGPA 8.0</dd></div>
+          <div><dt><h3>Languages</h3></dt><dd>English — Advanced | Tamil — Native | Malayalam — Native</dd></div></dl></div>
         <div class="rv"><p class="eyebrow">Certifications</p>
-          <dl><div><dt><h3>Backend Development Internship, PHP &amp; Laravel</h3></dt><dd>Zil Bank, 4 months</dd></div>
-          <div><dt><h3>PHP and Laravel Course</h3></dt><dd>Eazy Learning, 3 months</dd></div>
-          <div><dt><h3>Introduction to Python</h3></dt><dd>Great Learning</dd></div></dl></div>
+          <dl><div><dt><h3>PHP and Laravel Course</h3></dt><dd>Eazy Learning, 3 months</dd></div>
+          <div><dt><h3>Backend Development Internship, PHP &amp; Laravel</h3></dt><dd>Zil Bank, 4 months</dd></div>
+          <div><dt><h3>Introduction to Python</h3></dt><dd>Great Learning</dd></div>
+          <div><dt><h3>C Programming</h3></dt><dd>GUVI</dd></div>
+          <div><dt><h3>Basics of Film Making and VFX</h3></dt><dd>Maya Academy of Advanced Cinematics</dd></div></dl></div>
       </div>
     </div>
   </section>
@@ -645,7 +661,7 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
         </div>
         <div class="ctas rv">
           <a class="btn primary mag" href="mailto:shafeequeshzdxb@gmail.com">Email me</a>
-          <a class="btn ghost mag" href="tel:+971553683653">Call me</a>
+          <a class="btn ghost mag" href="tel:+971567840532">Call me</a>
         </div>
       </div>
       <div class="ccards" id="ccards">
@@ -656,28 +672,28 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
           <span class="spot"></span></div>
         <div class="ccard tilt rv">
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg></span>
-          <p class="lb">Phone</p><p class="val">+971 55 368 3653</p>
-          <div class="acts"><a class="u" href="tel:+971553683653">Call</a><button type="button" class="u copy" data-copy="+971553683653">Copy</button></div>
+          <p class="lb">Phone</p><p class="val">+971 56 784 0532</p>
+          <div class="acts"><a class="u" href="tel:+971567840532">Call</a><button type="button" class="u copy" data-copy="+971567840532">Copy</button></div>
           <span class="spot"></span></div>
         <div class="ccard tilt rv">
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0112 2.5a7 7 0 017 7C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
           <p class="lb">Location</p><p class="val">Dubai, United Arab Emirates</p>
           <div class="acts"><span class="muted" style="font-size:.9rem">Open to roles in Dubai</span></div>
           <span class="spot"></span></div>
-        <div class="ccard tilt rv">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.8-1.7-2.8-1.71 0-1.97 1.33-1.97 2.7V21h-4z"/></svg></span>
-          <p class="lb">LinkedIn</p><p class="val">Mohammed Shafeeque M</p>
-          <div class="acts"><a class="u" href="https://www.linkedin.com/in/mohammed-shafeeque-046b12135" id="linkedin" target="_blank" rel="noopener">View profile</a></div>
+        <div class="ccard wide tilt rv">
+          <div class="pc">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.8-1.7-2.8-1.71 0-1.97 1.33-1.97 2.7V21h-4z"/></svg></span>
+            <p class="lb">LinkedIn</p><p class="val">Mohammed Shafeeque M</p>
+            <p class="muted" style="font-size:.95rem">Full Stack Developer | Node.js, React, Next.js, Expo, PHP/Laravel</p>
+            <p class="muted" style="font-size:.9rem">Dubai, United Arab Emirates</p>
+            <a class="btn primary sm" href="https://www.linkedin.com/in/mohammed-shafeeque-046b12135" target="_blank" rel="noopener">View profile on LinkedIn</a>
+          </div>
+          <div class="badge-base LI-profile-badge li-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="mohammed-shafeeque-046b12135" data-version="v1"></div>
           <span class="spot"></span></div>
         <div class="ccard tilt rv">
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.5 9.5 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></span>
-          <p class="lb">GitHub</p><p class="val">github.com/shafikMRM</p>
-          <div class="acts"><a class="u" href="https://github.com/shafikMRM" target="_blank" rel="noopener">View repositories</a></div>
-          <span class="spot"></span></div>
-        <div class="ccard tilt rv">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span>
-          <p class="lb">Languages</p><p class="val">English, Tamil, Malayalam</p>
-          <div class="acts"><span class="muted" style="font-size:.9rem">Advanced English, native Tamil and Malayalam</span></div>
+          <p class="lb">GitHub</p><p class="val">shafikMRM</p>
+          <div class="acts"><a class="u" href="https://github.com/shafikMRM" target="_blank" rel="noopener">GitHub</a></div>
           <span class="spot"></span></div>
       </div>
     </div>
@@ -687,7 +703,7 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
 <footer>
   <div class="wrap">
     <p>© <span id="yr">2026</span> Mohammed Shafeeque M. Dubai, UAE.</p>
-    <button class="mt" id="motionBtn" type="button" role="switch" aria-checked="true">Motion <span class="sw" aria-hidden="true"></span></button>
+    <nav aria-label="Profiles"><a class="u" href="https://www.linkedin.com/in/mohammed-shafeeque-046b12135" target="_blank" rel="noopener">LinkedIn</a><a class="u" href="https://github.com/shafikMRM" target="_blank" rel="noopener">GitHub</a></nav>
   </div>
 </footer>
 
@@ -719,55 +735,41 @@ function motion(){return root.getAttribute('data-motion')==='on';}
 
 /* ---------- Projects ---------- */
 var P=[
- {id:'mrm-web',t:'MRM Investment LLC corporate website',s:'MRM Investment',co:'MRM Investment LLC',cat:['web','backend'],cv:'circle',
-  tags:['Next.js 15','React','Headless WordPress','Custom plugin'],
-  out:'A modern group website with a CMS the team can edit, built to replace mrminvestment.ae.',
-  role:'Full stack developer',year:'Current',
-  prob:'The holding company needed a premium website that presents its twelve businesses clearly and lets non-developers update content without touching code.',
-  appr:['Set up headless WordPress as the CMS with a custom plugin that models the group\'s content.','Built the Next.js 15 front end with a reusable React component library.','Delivered signature details: an animated hub diagram of the group, sliders and dropdown navigation.'],
-  res:['A fast, editable corporate site ready to replace the existing one.','Content model prepared to move onto MRM ERP.']},
- {id:'mrm-erp',t:'MRM ERP as the content backend',s:'MRM ERP',co:'MRM Investment LLC / Vesla Group',cat:['backend','data'],cv:'code',
-  tags:['Node.js','Express','TypeScript','PostgreSQL','Prisma'],
-  out:'Extended the company ERP so its CMS module powers the corporate websites.',
-  role:'Backend developer',year:'Current',
+ {id:'mrm-web',t:'MRM Investment Corporate Website',s:'MRM Investment',co:'MRM Investment LLC (Vesla Group)',cat:['web'],cv:'circle',
+  tags:['WordPress','PHP','Next.js','Expo','React','TypeScript'],url:'https://mrminvestment.ae',
+  out:'Group website for a Dubai holding company of twelve businesses. Built as headless WordPress with a custom plugin and Next.js 15, then rebuilt in Expo Router for web, iOS and Android, with full technical SEO.',
+  role:'Full stack developer',year:'Aug 2026 – Present',
+  prob:'The holding company needed a website that presents its twelve businesses clearly and lets the team update content without touching code.',
+  appr:['Set up headless WordPress as the CMS with a custom plugin that models the group\'s content.','Built the front end in Next.js 15, then rebuilt it in Expo Router for web, iOS and Android.','Applied full technical SEO: meta tags, canonical URLs, Open Graph, JSON-LD, sitemaps and 301 redirects.'],
+  res:['One codebase serving web, iOS and Android.','Content management later moved into the company ERP.']},
+ {id:'vesla-erp',t:'Vesla ERP — Website CMS',s:'Vesla ERP',co:'MRM Investment LLC (Vesla Group)',cat:['backend'],cv:'code',
+  tags:['React','Node.js','Express.js','TypeScript','PostgreSQL'],
+  out:'Moved the website\'s content management into the company ERP, with admin APIs, editor screens and role-based permissions.',
+  role:'Full stack developer',year:'Aug 2026 – Present',
   prob:'Website content lived in WordPress while the business ran on its own ERP, splitting data across two systems.',
-  appr:['Extended the ERP\'s CMS module with Node.js, Express and TypeScript on PostgreSQL with Prisma.','Built the additions the websites need to read their content from the ERP.','Worked on a development server and a develop branch before release.'],
-  res:['Website content managed in the same system that runs the business.','Removes the dependency on WordPress.']},
+  appr:['Built admin REST APIs in Node.js, Express.js and TypeScript on PostgreSQL.','Added editor screens in React with role-based permissions.','Moved the website\'s content management from WordPress into the ERP.'],
+  res:['Website content managed in the same system that runs the business.']},
+ {id:'vesla-rent',t:'Vesla Rent A Car',s:'Vesla Rent A Car',co:'MRM Investment LLC (Vesla Group)',cat:['web','backend'],cv:'phones',
+  tags:['Expo','React','Node.js','PostgreSQL'],url:'https://veslarentacar.ae',
+  out:'Fixed 19 SEO and CMS issues on the car rental website and apps, upgraded the ERP rich-text editor, and took over the Speed rental system integration.',
+  role:'Full stack developer',year:'Aug 2026 – Present',
+  prob:'The car rental website and apps had open SEO and CMS issues, and the ERP behind them had to meet Dubai car rental rules.',
+  appr:['Fixed 19 SEO and CMS issues across the website and apps.','Upgraded the rich-text editor in the ERP.','Took over the Speed rental system integration.','Audited the ERP\'s APIs against Dubai car rental rules (RTA TARS, Salik, SIRA GPS, VAT).'],
+  res:['19 SEO and CMS issues fixed.','A prioritised backlog from the API audit.']},
+ {id:'traacs-bi',t:'TRAACS BI Module',s:'TRAACS BI',co:'Nucore Software Solutions',cat:['data'],cv:'bars',
+  tags:['Backbone.js','Python Flask','PostgreSQL'],
+  out:'Business intelligence and reporting for a travel agency accounting product.',
+  role:'Software engineer',year:'Sep 2022 – Nov 2025',
+  prob:'Agencies needed clear reporting on their accounting data without slowing the main application.',
+  appr:['Built and maintained the BI module with Python Flask on the backend and Backbone.js on the front.','Created report exports in Excel, PDF and CSV.','Optimised the SQL behind the reports.'],
+  res:['Reports on demand in the formats clients use.']},
  {id:'mrm-core',t:'MRM Core Business Center website',s:'MRM Core',co:'MRM Core Business Center',cat:['web'],cv:'dot',
   tags:['Next.js','React','SEO'],
   out:'A premium, SEO-first multi-page corporate site for a Dubai business center.',
   role:'Front end developer',year:'Current',
   prob:'The business center needed a site that ranks well and feels as premium as the space itself.',
   appr:['Built a multi-page Next.js and React site with static content for speed and SEO.','Designed a bright premium theme with strong, purposeful animation.','Structured it so a backend can be connected later without a rebuild.'],
-  res:['SEO-ready corporate website in the style of international companies.']},
- {id:'traacs',t:'TRAACS travel agency accounting software',s:'TRAACS',co:'Nucore Software Solutions',cat:['backend','data'],cv:'ledger',
-  tags:['PHP','Zend Framework','PostgreSQL','Core PHP','PDO','cURL'],
-  out:'Accounting software travel agencies run their books on, from bookings and invoices to reports.',
-  role:'Software engineer',year:'Sep 2022 – Nov 2025',
-  prob:'Travel agencies needed accurate accounting across large volumes of bookings, invoices and payments, customised to each client.',
-  appr:['Customised backend functionality in PHP, Zend Framework and core PHP.','Wrote secure, efficient PDO queries on PostgreSQL and MySQL.','Used Postgres queues to run heavy tasks in the background.','Automated data dumps with cURL and exported reports to Excel, PDF and CSV.','Worked directly with clients on requirements and with the team in Jira.'],
-  res:['Client-specific features delivered on a stable PHP and Zend backend.','Heavy processing moved to background queues so the app stays responsive.']},
- {id:'traacs-bi',t:'TRAACS business intelligence module',s:'TRAACS BI',co:'Nucore Software Solutions',cat:['data','backend'],cv:'bars',
-  tags:['Python Flask','Backbone.js','PostgreSQL','MySQL'],
-  out:'Reports that show travel agencies how their business is doing, exported to Excel, PDF and CSV.',
-  role:'Software engineer',year:'Sep 2022 – Nov 2025',
-  prob:'Agencies needed clear reporting on their accounting data without slowing the main application.',
-  appr:['Built and maintained the BI module with Python Flask on the backend and Backbone.js on the front.','Created report exports in Excel, PDF and CSV.','Optimised the SQL behind the reports.'],
-  res:['Reports on demand in the formats clients use.']},
- {id:'ecom',t:'E-commerce storefronts for German retailers',s:'E-commerce',co:'Syncrayons Technologies',cat:['web','backend'],cv:'circle2',
-  tags:['Laravel','Eloquent ORM','MySQL'],
-  out:'Online stores for clients in Germany, built for speed and easy maintenance.',
-  role:'Junior software engineer',year:'Apr – Aug 2022',
-  prob:'Retail clients in Germany needed responsive, maintainable online stores.',
-  appr:['Developed and maintained the stores in Laravel.','Used Eloquent ORM for a clean, predictable data layer on MySQL.','Focused on performance and responsive layouts.'],
-  res:['Stores delivered and maintained to client requirements.']},
- {id:'bank',t:'Banking web application',s:'Banking app',co:'Zil Bank',cat:['backend'],cv:'code2',
-  tags:['Laravel','REST API','MySQL'],
-  out:'Secure backend modules and REST APIs for a banking app serving US clients.',
-  role:'Junior software engineer',year:'Jan – Mar 2022',
-  prob:'A US-facing banking application needed secure, maintainable backend services.',
-  appr:['Built REST APIs and backend modules in Laravel.','Took part in the full cycle: requirements, coding, testing and deployment.','Designed, coded and debugged backend modules with the team.'],
-  res:['Certified for outstanding performance.']}
+  res:['SEO-ready corporate website in the style of international companies.']}
 ];
 
 function cover(p){
@@ -778,7 +780,7 @@ function cover(p){
   if(p.cv==='ledger')c+='<div class="ledger"><p><span>INV-2291</span><b>AED 12,480</b></p><p><span>TKT-8830</span><b>AED 3,150</b></p><p><span>RCPT-0417</span><b>AED 9,900</b></p><p><span>Balance</span><b>AED 25,530</b></p></div>';
   if(p.cv==='bars')c+='<div class="bars"><i style="height:35%"></i><i style="height:60%"></i><i style="height:45%"></i><i style="height:80%"></i><i style="height:100%"></i></div>';
   if(p.cv==='code')c+='<div class="code">GET <b>/cms/pages</b><br>tenant: mrm<br>200 OK</div><div class="shape" style="width:40%;right:-10%;top:auto;bottom:-30%"></div>';
-  if(p.cv==='code2')c+='<div class="code">POST <b>/api/accounts</b><br>auth: bearer<br>201 Created</div>';
+  if(p.cv==='phones')c+='<div class="phones"><i></i><i></i><i></i></div>';
   var short=p.s;
   var cats=p.cat.map(function(x){return {web:'Web',backend:'Backend',data:'Data'}[x];}).join(' / ');
   return c+'<p class="ttl"><small>'+cats+'</small>'+short+'</p></div>';
@@ -787,7 +789,7 @@ function cover(p){
 var cards=d.getElementById('cards');
 cards.classList.add('all');
 cards.innerHTML=P.map(function(p,i){
-  return '<button class="card rv'+(i===0||i===3?' wide':'')+'" type="button" data-i="'+i+'" data-cat="'+p.cat.join(' ')+'" style="--d:'+(Math.min(i%3,8)*70)+'ms">'+
+  return '<button class="card rv'+(i===0?' wide':'')+'" type="button" data-i="'+i+'" data-cat="'+p.cat.join(' ')+'" style="--d:'+(Math.min(i%3,8)*70)+'ms">'+
    '<div class="cover">'+cover(p)+'</div>'+
    '<div class="body"><p class="co">'+p.co+'</p><h3>'+p.t+'</h3><p class="out">'+p.out+'</p>'+
    '<div class="tags">'+p.tags.map(function(t){return '<span>'+t+'</span>';}).join('')+'</div>'+
@@ -827,6 +829,7 @@ var flow=d.getElementById('flow'),stage=d.getElementById('flowStage'),info=d.get
 var list=[],items=[],shades=[],pos=0,target=0,raf=0,last=0,drag=null,shown=-1,fw=0,capTimer=0;
 function pad(n){return (n<10?'0':'')+n;}
 function li(a){return a.map(function(x){return '<li>'+x+'</li>';}).join('');}
+function site(u){return u.replace(/^https?:\/\//,'');}
 function buildFlow(l){
   list=l;pos=target=0;shown=-1;
   stage.innerHTML=list.map(function(pi,k){var c=cover(P[pi]);return '<div class="flow-item" role="option" data-k="'+k+'" aria-label="'+P[pi].t+'"><div class="face">'+c+'<span class="shade"></span></div>'+'<div class="refl" aria-hidden="true">'+c+'</div>'+'<span class="ring"></span></div>';}).join('');
@@ -841,7 +844,8 @@ function caption(c){
     '<div class="meta2"><span><b>Role</b>'+p.role+'</span><span><b>When</b>'+p.year+'</span></div>'+
     '<div class="did"><div><h4>What I did</h4><ul>'+li(p.appr)+'</ul></div><div><h4>Tech I used</h4><div class="tags">'+p.tags.map(function(t){return '<span>'+t+'</span>';}).join('')+'</div>'+
     '<h4 style="margin-top:1.3rem">Result</h4><ul>'+li(p.res)+'</ul></div></div>'+
-    '<button class="btn primary" type="button" data-open="'+list[c]+'">Full case study</button></div>';
+    '<div class="fbtns"><button class="btn primary" type="button" data-open="'+list[c]+'">Full case study</button>'+
+    (p.url?'<a class="btn ghost" href="'+p.url+'" target="_blank" rel="noopener">Visit '+site(p.url)+'</a>':'')+'</div></div>';
   var old=info.firstChild;
   clearTimeout(capTimer);
   if(old&&motion()){
@@ -945,6 +949,7 @@ function openCase(i){
    '<div class="sec"><h3>Problem</h3><p class="muted">'+p.prob+'</p></div>'+
    '<div class="sec"><h3>Approach</h3><ul>'+p.appr.map(function(a){return '<li>'+a+'</li>';}).join('')+'</ul></div>'+
    '<div class="sec"><h3>Stack</h3><div class="tags" style="padding:0">'+p.tags.map(function(t){return '<span>'+t+'</span>';}).join('')+'</div></div>'+
+   (p.url?'<div class="sec"><h3>Live site</h3><p><a class="u" href="'+p.url+'" target="_blank" rel="noopener">'+site(p.url)+'</a></p></div>':'')+
    '<div class="sec"><h3>Outcome</h3><ul>'+p.res.map(function(a){return '<li>'+a+'</li>';}).join('')+'</ul></div>'+
    '<div class="sec"><h3>Screens</h3><div class="gallery"><div>Screenshot 1</div><div>Screenshot 2</div><div>Screenshot 3</div></div></div>'+
    '<div class="next"><span class="muted">Next project</span><button class="btn ghost sm" type="button" id="nextCase">'+n.t+'</button></div>';
@@ -963,7 +968,7 @@ cs.addEventListener('scroll',updProg,{passive:true});
 
 /* ---------- Skills hub ---------- */
 var hub=d.getElementById('hubSvg'),ns='http://www.w3.org/2000/svg';
-var G=['Frontend','Backend','Data & BI','DevOps'],cx=300,cy=260,R=195;
+var G=['Languages','Frontend','Backend','CMS & SEO','Databases','ERP','DevOps','AI Tools'],cx=300,cy=260,R=195;
 var hs='';
 G.forEach(function(g,i){
   var a=(-90+i*360/G.length)*Math.PI/180,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);
@@ -1020,7 +1025,7 @@ function startReveals(){
       }else if(!e.isIntersecting){
         t.classList.remove('in');
         t.classList.toggle('from-top',e.boundingClientRect.top<0);
-        var m=t.querySelector('[data-count]');if(m){cancelAnimationFrame(m._r);m.textContent=1;}
+        var m=t.querySelector('[data-count]');if(m){cancelAnimationFrame(m._r);m.textContent=m.dataset.count;}
       }
     });
   },{threshold:[0,.12,.3]});
@@ -1048,7 +1053,6 @@ function initLenis(){
   if(lenis||!motion()||typeof Lenis==='undefined')return;
   lenis=new Lenis({lerp:.09,smoothWheel:true,wheelMultiplier:1,anchors:{offset:-84},autoRaf:true});
 }
-function killLenis(){if(lenis){lenis.destroy();lenis=null;}}
 initLenis();
 
 /* ---------- Header stuck / back to top ---------- */
@@ -1107,12 +1111,6 @@ tb.addEventListener('click',function(){
   });
 });
 
-/* ---------- Motion toggle ---------- */
-var mb=d.getElementById('motionBtn');
-function mlabel(){mb.setAttribute('aria-checked',motion()?'true':'false');}
-mlabel();
-mb.addEventListener('click',function(){var n=motion()?'off':'on';root.setAttribute('data-motion',n);try{localStorage.setItem('motion',n);}catch(e){}mlabel();if(n==='on')initLenis();else killLenis();});
-
 /* ---------- Copy buttons ---------- */
 d.querySelectorAll('.copy').forEach(function(b){
   b.addEventListener('click',function(){
@@ -1124,5 +1122,6 @@ d.querySelectorAll('.copy').forEach(function(b){
 d.getElementById('yr').textContent=new Date().getFullYear();
 })();
 </script>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>

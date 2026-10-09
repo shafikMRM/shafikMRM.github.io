@@ -4,8 +4,8 @@ Portfolio of **Mohammed Shafeeque M**, full stack developer in Dubai.
 
 Live at **https://shafikmrm.github.io/**
 
-A single static `index.html` with no build step. It includes light and dark themes with a switch, a Motion on/off toggle that respects reduced-motion settings, a project cover flow and grid, and case-study dialogs.
+A single static `index.html` with no build step. It includes light and dark themes with a switch, animation that turns off under reduced-motion settings, a project cover flow and grid, and case-study dialogs.
 
-## Adding a portrait
+## Resume
 
-Put `photo.jpg` next to `index.html` and uncomment the `<img>` line inside the portrait block.
+The "Download Resume" button links to `/assets/Mohammed_Shafeeque_Resume.pdf`. Put the PDF at that path; other PDFs are ignored by git.
