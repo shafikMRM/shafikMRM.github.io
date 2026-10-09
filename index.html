@@ -224,8 +224,8 @@ section{padding:clamp(5rem,10vw,8.5rem) 0}
 .hub .node.act circle{stroke:var(--gold-deep);fill:var(--glow)}
 .hub .center circle{fill:#17161A}
 .hub .center text{font-family:var(--serif);font-weight:700;font-size:20px;fill:#F2CE1B}
-.hub.compact{max-width:380px}
-.hub.compact .node text{font-size:15px}
+.hub.compact{max-width:none;width:calc(100% + 20px);margin-inline:-10px}
+.hub.compact .node text{font-size:20px}
 .hub .node{cursor:pointer}
 .hub .node rect{transition:stroke 300ms var(--soft)}
 .hub .node.act rect{stroke:var(--gold-deep)}
@@ -1065,32 +1065,27 @@ cs.addEventListener('scroll',updProg,{passive:true});
 /* ---------- Skills hub ---------- */
 var hub=d.getElementById('hubSvg'),hubBox=hub.parentNode,hubMode='',hubAct=-1;
 var G=['Languages','Frontend','Backend','CMS & SEO','Databases','ERP','DevOps','AI Tools','Soft Skills'];
-/* Narrow layout is hand-placed so every pill stays inside the frame and clear of the spokes: x,y is the dot, px the pill centre */
-var HUBC=[{x:170,y:70,px:170},{x:205,y:135,px:258},{x:230,y:215,px:258},{x:230,y:365,px:262},{x:200,y:445,px:258},{x:140,y:445,px:110},{x:110,y:365,px:82},{x:110,y:215,px:82},{x:140,y:135,px:82}];
-function hubWide(){
-  var grid=hubBox.parentNode,t=getComputedStyle(grid).gridTemplateColumns.split(' ');
-  return (t.length>1?parseFloat(t[0]):grid.clientWidth)>=520;
-}
+/* One radial layout for every screen. Under 600px only the label size and pill padding grow, and the viewBox is trimmed to the drawing */
 function buildHub(){
-  var wide=hubWide(),mode=wide?'wide':'compact';
+  var small=innerWidth<600,mode=small?'compact':'wide';
   if(mode===hubMode)return;hubMode=mode;
-  var cx=wide?300:170,cy=wide?260:290,R=195,cw=wide?10.5:11.25,pad=wide?36:30,hs='',pts=[];
+  var cx=300,cy=260,R=195,f=small?20:14,cw=small?14.4:10.5,pad=small?28:36,ph=small?40:34,gap=16,hs='',pts=[],x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;
   G.forEach(function(g,i){
-    var a=(-90+i*360/G.length)*Math.PI/180,p=wide?{x:cx+R*Math.cos(a),y:cy+R*Math.sin(a)}:HUBC[i];
-    if(wide)p.px=p.x;pts.push(p);
+    var a=(-90+i*360/G.length)*Math.PI/180,p={x:cx+R*Math.cos(a),y:cy+R*Math.sin(a)};pts.push(p);
     var path='M'+cx+','+cy+' L'+p.x.toFixed(1)+','+p.y.toFixed(1);
     hs+='<path class="spoke" d="'+path+'"/><path class="pulse" d="'+path+'" style="animation-delay:'+(i*650)+'ms"/>';
   });
   G.forEach(function(g,i){
-    var p=pts[i],w=g.length*cw+pad,up=p.y<cy,ry=p.y+(up?-50:16),l=Math.min(p.px-w/2,p.x-14),r=Math.max(p.px+w/2,p.x+14);
+    var p=pts[i],w=g.length*cw+pad,up=p.y<cy,ry=up?p.y-gap-ph:p.y+gap,l=Math.min(p.x-w/2,p.x-40),r=Math.max(p.x+w/2,p.x+40);
+    x0=Math.min(x0,p.x-w/2);x1=Math.max(x1,p.x+w/2);y0=Math.min(y0,ry);y1=Math.max(y1,ry+ph);
     hs+='<g class="node" data-g="'+i+'"><circle cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="9"/>'+
-      '<rect x="'+(p.px-w/2).toFixed(1)+'" y="'+ry.toFixed(1)+'" width="'+w+'" height="34" rx="17" fill="var(--surface)" stroke="var(--edge)"/>'+
-      '<text x="'+p.px.toFixed(1)+'" y="'+(p.y+(up?-28:38)).toFixed(1)+'" text-anchor="middle">'+g+'</text>'+
-      '<rect class="hit" x="'+l.toFixed(1)+'" y="'+(up?ry-6:p.y-14).toFixed(1)+'" width="'+(r-l).toFixed(1)+'" height="70"/></g>';
+      '<rect x="'+(p.x-w/2).toFixed(1)+'" y="'+ry.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+ph+'" rx="'+(ph/2)+'" fill="var(--surface)" stroke="var(--edge)"/>'+
+      '<text x="'+p.x.toFixed(1)+'" y="'+(ry+ph/2+f*.36).toFixed(1)+'" text-anchor="middle">'+g+'</text>'+
+      '<rect class="hit" x="'+l.toFixed(1)+'" y="'+(up?ry-8:p.y-16).toFixed(1)+'" width="'+(r-l).toFixed(1)+'" height="'+(ph+gap+24)+'"/></g>';
   });
-  hs+='<g class="center"><circle cx="'+cx+'" cy="'+cy+'" r="'+(wide?68:60)+'"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(wide?80:70)+'" fill="none" stroke="var(--gold)" stroke-opacity=".5"/><text x="'+cx+'" y="'+(cy+7)+'" text-anchor="middle">Shafeeque</text></g>';
-  hub.setAttribute('viewBox',wide?'0 0 600 520':'0 0 340 515');
-  hubBox.classList.toggle('compact',!wide);
+  hs+='<g class="center"><circle cx="'+cx+'" cy="'+cy+'" r="68"/><circle cx="'+cx+'" cy="'+cy+'" r="80" fill="none" stroke="var(--gold)" stroke-opacity=".5"/><text x="'+cx+'" y="'+(cy+7)+'" text-anchor="middle">Shafeeque</text></g>';
+  hub.setAttribute('viewBox',small?[x0-3,y0-3,x1-x0+6,y1-y0+6].map(function(n){return n.toFixed(1);}).join(' '):'0 0 600 520');
+  hubBox.classList.toggle('compact',small);
   hub.innerHTML=hs;act(hubAct);
 }
 function act(i){
