@@ -370,8 +370,6 @@ section{padding:clamp(5rem,10vw,8.5rem) 0}
 .ccard.wide{grid-column:span 2;flex-direction:row;flex-wrap:wrap;align-items:flex-end;gap:1.5rem}
 .ccard.wide .pc{display:flex;flex-direction:column;gap:.35rem;flex:1 1 260px;align-self:stretch}
 .ccard.wide .pc .btn{margin-top:1rem;align-self:flex-start}
-.li-badge{position:relative;z-index:2;max-width:100%;overflow:hidden}
-.li-badge:empty{display:none}
 @media (max-width:1020px){.ccards{grid-template-columns:repeat(2,1fr)}.ccard.wide{order:1}}
 @media (max-width:600px){.ccards{grid-template-columns:1fr}.ccard.wide{grid-column:auto}}
 @media (hover:hover) and (pointer:fine){
@@ -402,7 +400,7 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
 .case .scroller{max-height:92vh;overflow-y:auto;overscroll-behavior:contain}
 .case .prog{position:sticky;top:0;height:3px;background:var(--gold);transform-origin:left;transform:scaleX(0);z-index:3}
 .case .close{position:absolute;top:1rem;right:1rem;z-index:4;background:rgba(23,22,26,.7);color:#fff;border:1px solid rgba(255,255,255,.2)}
-.case .cover{position:relative;aspect-ratio:21/8;background:#17161A}
+.case .cover{position:relative;aspect-ratio:21/8;background:#17161A;overflow:hidden}
 .case .inner{padding:clamp(1.5rem,4vw,3rem)}
 .case h2{max-width:none;margin:.4rem 0 1rem}
 .case .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0;padding:1.25rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -411,8 +409,6 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
 .case .sec h3{font-family:var(--cond);font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;padding-top:.25rem}
 .case .sec ul{padding-left:1.1rem;color:var(--text2)}
 .case .sec li{margin-bottom:.4rem}
-.case .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:.5rem}
-.case .gallery div{aspect-ratio:16/10;border-radius:10px;border:1px dashed var(--edge);display:grid;place-items:center;font-size:.8rem;color:var(--text2);background:var(--raised)}
 .case .next{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line);flex-wrap:wrap}
 
 /* Responsive */
@@ -445,7 +441,6 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
   .cards.all .card.wide .cover{padding-bottom:0;height:auto;aspect-ratio:16/10}
   .float{display:none}
   .case .meta{grid-template-columns:1fr}
-  .case .gallery{grid-template-columns:1fr 1fr}
   .float{left:0;bottom:30%}
   .logo .nm small{display:none}
   .strip ul{gap:.75rem 1.5rem;font-size:1rem}
@@ -497,7 +492,7 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
         <p class="eyebrow rv">Dubai, United Arab Emirates</p>
         <h1 id="hero-title" class="words">Mohammed Shafeeque&nbsp;M</h1>
         <p class="role rv"><b>Full Stack Developer</b> | Node.js, React, Next.js, Expo, PHP/Laravel | <b>ERP, CMS &amp; SEO</b></p>
-        <p class="lead rv">I build corporate websites, ERP integrations and fast, reliable backends. Four years across travel, banking and e-commerce products for clients in India, Germany and the US, now shipping for a twelve-business group in Dubai.</p>
+        <p class="lead rv">I build corporate websites, ERP integrations and fast, reliable backends. More than four years across travel, banking and e-commerce products for clients in India, Germany and the US, now shipping for a twelve-business group in Dubai.</p>
         <div class="ctas rv">
           <a class="btn primary mag" href="#work">View my work</a>
           <a class="btn ghost mag" href="#contact">Contact me</a>
@@ -545,7 +540,7 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
         </div>
         <div class="story rv">
           <p class="lead">Full Stack Developer with 4+ years of experience building websites, ERP modules, CMS platforms and REST APIs with Node.js, Express.js, TypeScript, React.js, Next.js, Expo, WordPress (headless), PHP (Laravel, Zend Framework, Drupal) and Python Flask on PostgreSQL and MySQL.</p>
-          <p class="muted">At MRM Investment LLC (Vesla Group), a Dubai holding group of twelve businesses, I built the group's corporate website end to end, moved its content management into the in-house ERP, and fix SEO and CMS issues across the Vesla ERP and the Vesla Rent A Car website and apps. I'm strong in technical SEO and careful debugging, and I use the Claude AI coding agent for AI-assisted development.</p>
+          <p class="muted">At MRM Investment LLC (Vesla Group), a Dubai holding group of twelve businesses, I built the group's corporate website end to end, moved its content management into the in-house ERP, and fixed SEO and CMS issues across the Vesla ERP and the Vesla Rent A Car website and apps. I'm strong in technical SEO, careful debugging and AI-assisted development with the Claude AI coding agent.</p>
         </div>
       </div>
       <div class="stats">
@@ -571,13 +566,14 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
         <div>
         <ul class="groups" id="groups">
           <li class="group rv" data-g="0"><h3>Languages <span>01</span></h3><p>JavaScript, TypeScript, PHP, Python, SQL, HTML5, CSS3</p></li>
-          <li class="group rv" data-g="1"><h3>Frontend <span>02</span></h3><p>React.js 19, Next.js 15 (App Router), Expo Router (React Native for Web), Tailwind CSS, Vite, Leaflet, Backbone.js, jQuery, Ajax, Bootstrap</p></li>
-          <li class="group rv" data-g="2"><h3>Backend <span>03</span></h3><p>Node.js, Express.js, Laravel, Zend Framework, Drupal, Core PHP, Python Flask, Django (Basic), REST APIs, cURL</p></li>
+          <li class="group rv" data-g="1"><h3>Frontend <span>02</span></h3><p>React.js 19, Next.js 15 (App Router), Expo Router (React Native for Web), Tailwind CSS, Vite, Leaflet, Backbone.js, jQuery, Ajax, Bootstrap, Responsive Design</p></li>
+          <li class="group rv" data-g="2"><h3>Backend <span>03</span></h3><p>Node.js, Express.js, Laravel, Zend Framework, Drupal, Core PHP, Python Flask, Django (Basic), REST APIs, cURL, MVC, OOP</p></li>
           <li class="group rv" data-g="3"><h3>CMS &amp; SEO <span>04</span></h3><p>Headless WordPress, Custom WordPress Plugins, WordPress REST API, ACF, Custom Post Types, ERP-based CMS, Rich-Text Editors, Role-Based Permissions, Technical SEO (meta tags, canonical URLs, Open Graph, JSON-LD, sitemaps, 301 redirects), On-Demand Revalidation</p></li>
-          <li class="group rv" data-g="4"><h3>Databases <span>05</span></h3><p>PostgreSQL, MySQL, Prisma, Eloquent ORM, PDO, Postgres Queues, SQL Query Optimization</p></li>
+          <li class="group rv" data-g="4"><h3>Databases <span>05</span></h3><p>PostgreSQL, MySQL, Prisma ORM, Eloquent ORM, PDO, Postgres Queues, SQL Query Optimization</p></li>
           <li class="group rv" data-g="5"><h3>ERP &amp; Business <span>06</span></h3><p>ERP Development, Car Rental Systems (RTA TARS, Salik, SIRA GPS), API Audits, Third-Party Integrations, BI Reporting (Excel, PDF, CSV), Data Analysis</p></li>
           <li class="group rv" data-g="6"><h3>DevOps &amp; Tools <span>07</span></h3><p>Render, AWS (S3), Docker, Jenkins, SonarQube, Git, GitHub (branches, pull requests), LocalWP, Jira, Gulp, Agile/Scrum</p></li>
           <li class="group rv" data-g="7"><h3>AI Tools <span>08</span></h3><p>Claude AI Coding Agent (Claude Code), AI-Assisted Development, Prompt-Driven Code Audits</p></li>
+          <li class="group rv" data-g="8"><h3>Soft Skills <span>09</span></h3><p>Debugging, Problem Solving, Attention to Detail, Ownership, Cross-Functional Collaboration, Client Communication</p></li>
         </ul>
         <div class="tags rv" style="padding:1rem 1.25rem 0"><span>Currently learning: MongoDB</span></div>
         </div>
@@ -626,23 +622,23 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
         <div><p class="eyebrow rv">Experience</p><h2 id="exp-title" class="words">Where I've worked.</h2></div>
       </div>
       <ol class="tl">
-        <li class="rv"><p class="when">Aug 2026 – Present</p><div><h3>Full Stack Developer</h3><p class="co">MRM Investment LLC (Vesla Group) · Dubai</p>
-          <ul><li>Built the MRM Investment corporate website (headless WordPress + Next.js 15, later Expo Router for web, iOS and Android) with full technical SEO.</li><li>Moved the website's content management into the Vesla ERP: admin REST APIs and editor screens with role-based permissions.</li><li>Audited the ERP's APIs against Dubai car rental rules (RTA TARS, Salik, SIRA GPS, VAT) into a prioritised backlog.</li><li>Fixed 19 SEO and CMS issues on the Vesla Rent A Car website and apps, upgraded the rich-text editor, and took over the Speed integration.</li><li>AI-assisted development with the Claude AI coding agent.</li></ul></div></li>
-        <li class="rv"><p class="when">Sep 2022 – Nov 2025</p><div><h3>Software Engineer, Full Stack</h3><p class="co">Nucore Software Solutions · Kozhikode</p>
-          <ul><li>Worked on TRAACS, a travel agency accounting product, and built and maintained its BI module (Python Flask, Backbone.js).</li><li>Customised backend features in PHP, Zend Framework and core PHP; secure PDO queries on MySQL and PostgreSQL.</li><li>Report exports to Excel, PDF and CSV, cURL data dumps, and Postgres queues for background work.</li><li>Worked directly with clients on requirements and with cross-functional teams in Jira.</li></ul></div></li>
-        <li class="rv"><p class="when">Apr 2022 – Aug 2022</p><div><h3>Junior Software Engineer</h3><p class="co">Syncrayons Technologies · Trivandrum</p>
-          <ul><li>Developed e-commerce websites for German clients in Laravel with Eloquent ORM and MySQL.</li></ul></div></li>
-        <li class="rv"><p class="when">Jan 2022 – Mar 2022</p><div><h3>Junior Software Engineer</h3><p class="co">Zil Bank · Manjeri</p>
-          <ul><li>Backend modules and REST APIs for a banking web application serving US clients.</li><li>Certified for outstanding performance.</li></ul></div></li>
+        <li class="rv"><p class="when">Aug 2026 – Present</p><div><h3>Full Stack Developer</h3><p class="co">MRM Investment LLC (Vesla Group) · Dubai, United Arab Emirates</p>
+          <ul><li>Built the MRM Investment corporate website (mrminvestment.ae) as headless WordPress with a custom plugin and a Next.js 15 front end, then rebuilt it in Expo Router (React, TypeScript) for web, iOS and Android, with full technical SEO on every page.</li><li>Moved the website's content management into the Vesla ERP: built the admin REST APIs and editor screens (Node.js, Express.js, TypeScript, PostgreSQL) with role-based permissions.</li><li>Audited the ERP's APIs and mapped gaps against Dubai car rental rules (RTA TARS, Salik, SIRA GPS, VAT) into a prioritised backlog.</li><li>Fixed 19 SEO and CMS issues on the Vesla Rent A Car website and apps, upgraded the ERP rich-text editor, and took over the Speed car rental system integration.</li><li>Use the Claude AI coding agent for AI-assisted development, debugging and code review.</li></ul></div></li>
+        <li class="rv"><p class="when">Sep 2022 – Nov 2025</p><div><h3>Software Engineer, Full Stack Developer</h3><p class="co">Nucore Software Solutions · Kozhikode, Kerala, India</p>
+          <ul><li>Developed and maintained the Business Intelligence (BI) module of TRAACS, a travel agency accounting software, using Backbone.js (frontend) and Python Flask (backend).</li><li>Customized backend functionality with PHP, Zend Framework and Core PHP for seamless integration.</li><li>Built report exports in Excel, PDF and CSV and automated data dumps using cURL.</li><li>Wrote secure, efficient PDO-based SQL queries for MySQL and PostgreSQL; used Postgres queues for background tasks.</li><li>Worked with cross-functional teams in Jira and communicated directly with clients on requirements and solutions.</li></ul></div></li>
+        <li class="rv"><p class="when">Apr 2022 – Aug 2022</p><div><h3>Junior Software Engineer, Full Stack Developer</h3><p class="co">Syncrayons Technologies · Technopark, Trivandrum, Kerala, India</p>
+          <ul><li>Developed and maintained e-commerce websites for German clients using Laravel.</li><li>Used Eloquent ORM for MySQL and delivered fast, responsive and maintainable code to client requirements.</li></ul></div></li>
+        <li class="rv"><p class="when">Jan 2022 – Mar 2022</p><div><h3>Junior Software Engineer, Full Stack Developer</h3><p class="co">Zil Bank · Manjeri, Kerala, India</p>
+          <ul><li>Contributed to a banking web application for U.S.-based clients using Laravel.</li><li>Built scalable, secure and maintainable back-end systems with REST APIs.</li><li>Took part in the full development life cycle (requirements, coding, testing, deployment); certified for outstanding performance.</li></ul></div></li>
       </ol>
       <div class="edu">
         <div class="rv"><p class="eyebrow">Education</p>
-          <dl><div><dt><h3>BE, Computer Science and Engineering</h3></dt><dd>Kumaraguru College of Technology, Coimbatore. First Class, CGPA 7.3</dd></div>
-          <div><dt><h3>Diploma, Computer Science and Engineering</h3></dt><dd>Ramakrishna Polytechnic College, Coimbatore. Distinction, CGPA 8.0</dd></div>
+          <dl><div><dt><h3>Bachelor of Engineering (BE), Computer Science and Engineering</h3></dt><dd>Kumaraguru College of Technology, Coimbatore, Tamil Nadu. First Class, CGPA 7.3</dd></div>
+          <div><dt><h3>Diploma in Computer Science and Engineering</h3></dt><dd>Ramakrishna Polytechnic College, Coimbatore, Tamil Nadu. Distinction, CGPA 8.0</dd></div>
           <div><dt><h3>Languages</h3></dt><dd>English — Advanced | Tamil — Native | Malayalam — Native</dd></div></dl></div>
         <div class="rv"><p class="eyebrow">Certifications</p>
-          <dl><div><dt><h3>PHP and Laravel Course</h3></dt><dd>Eazy Learning, 3 months</dd></div>
-          <div><dt><h3>Backend Development Internship, PHP &amp; Laravel</h3></dt><dd>Zil Bank, 4 months</dd></div>
+          <dl><div><dt><h3>PHP and Laravel Course</h3></dt><dd>Eazy Learning, 3 months, online</dd></div>
+          <div><dt><h3>Backend Development Internship (PHP &amp; Laravel)</h3></dt><dd>Zil Bank, Manjeri, 4 months</dd></div>
           <div><dt><h3>Introduction to Python</h3></dt><dd>Great Learning</dd></div>
           <div><dt><h3>C Programming</h3></dt><dd>GUVI</dd></div>
           <div><dt><h3>Basics of Film Making and VFX</h3></dt><dd>Maya Academy of Advanced Cinematics</dd></div></dl></div>
@@ -688,7 +684,6 @@ dialog.case[open]{animation:dlg 520ms var(--pop)}
             <p class="muted" style="font-size:.9rem">Dubai, United Arab Emirates</p>
             <a class="btn primary sm" href="https://www.linkedin.com/in/mohammed-shafeeque-046b12135" target="_blank" rel="noopener">View profile on LinkedIn</a>
           </div>
-          <div class="badge-base LI-profile-badge li-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="mohammed-shafeeque-046b12135" data-version="v1"></div>
           <span class="spot"></span></div>
         <div class="ccard tilt rv">
           <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.5 9.5 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></span>
@@ -951,7 +946,6 @@ function openCase(i){
    '<div class="sec"><h3>Stack</h3><div class="tags" style="padding:0">'+p.tags.map(function(t){return '<span>'+t+'</span>';}).join('')+'</div></div>'+
    (p.url?'<div class="sec"><h3>Live site</h3><p><a class="u" href="'+p.url+'" target="_blank" rel="noopener">'+site(p.url)+'</a></p></div>':'')+
    '<div class="sec"><h3>Outcome</h3><ul>'+p.res.map(function(a){return '<li>'+a+'</li>';}).join('')+'</ul></div>'+
-   '<div class="sec"><h3>Screens</h3><div class="gallery"><div>Screenshot 1</div><div>Screenshot 2</div><div>Screenshot 3</div></div></div>'+
    '<div class="next"><span class="muted">Next project</span><button class="btn ghost sm" type="button" id="nextCase">'+n.t+'</button></div>';
   d.getElementById('nextCase').onclick=function(){openCase((cur+1)%P.length);d.getElementById('caseScroll').scrollTop=0;};
   if(!dlg.open){lastFocus=d.activeElement;if(lenis)lenis.stop();dlg.showModal();root.style.overflow='hidden';}
@@ -968,7 +962,7 @@ cs.addEventListener('scroll',updProg,{passive:true});
 
 /* ---------- Skills hub ---------- */
 var hub=d.getElementById('hubSvg'),ns='http://www.w3.org/2000/svg';
-var G=['Languages','Frontend','Backend','CMS & SEO','Databases','ERP','DevOps','AI Tools'],cx=300,cy=260,R=195;
+var G=['Languages','Frontend','Backend','CMS & SEO','Databases','ERP','DevOps','AI Tools','Soft Skills'],cx=300,cy=260,R=195;
 var hs='';
 G.forEach(function(g,i){
   var a=(-90+i*360/G.length)*Math.PI/180,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);
@@ -1122,6 +1116,5 @@ d.querySelectorAll('.copy').forEach(function(b){
 d.getElementById('yr').textContent=new Date().getFullYear();
 })();
 </script>
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 </html>
